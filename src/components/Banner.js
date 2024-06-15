@@ -51,18 +51,18 @@ export const Banner = () => {
       <Container className="text-center">
         <Row className="aligh-items-center">
             <Col>
-                <TrackVisibility>
-                    {({ isVisible }) =>
-                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1><span className="yellow">{`Hi! I'm`}</span> {`Sankalpa Hettiarachchi`}</h1>
-                        <h2>{`{ `}<span className="txt-rotate brackets" dataPeriod="1000" data-rotate='[ "Laravel Developer", "Full-Stack Developer", "Back-End Developer" ]'><span className="wrap">{text}</span></span>{` }`}</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <div className="see-project-btn">
-                            <button onClick={() => console.log('connect')}>See My Works <ArrowRightCircle size={25} /></button>
-                        </div>
-                    </div>}
-                </TrackVisibility>
+              <TrackVisibility>
+                  {({ isVisible }) =>
+                  <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                      <span className="tagline">Welcome to my Portfolio</span>
+                      <h1><span className="yellow">{`Hi! I'm`}</span> {`Sankalpa Hettiarachchi`}</h1>
+                      <h2>{`{ `}<span className="txt-rotate brackets" dataPeriod="1000" data-rotate='[ "Laravel Developer", "Full-Stack Developer", "Back-End Developer" ]'><span className="wrap">{text}</span></span>{` }`}</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                      <div className="see-project-btn">
+                          <button onClick={() => console.log('connect')}>See My Works <ArrowRightCircle size={25} /></button>
+                      </div>
+                  </div>}
+              </TrackVisibility>
             </Col>
         </Row>
       </Container>

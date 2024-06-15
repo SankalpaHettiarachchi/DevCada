@@ -1,6 +1,7 @@
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
 import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -129,40 +130,55 @@ export const Skills = () => {
                         <h2 className="mb-5">Skills</h2>
                         <span className="tagline mb-4">Frameworks & Libraries</span>
                         <Carousel responsive={responsiveFrameworks} infinite={false} className="owl-carousel owl-theme skill-slider">
-                            {frameworks.map((image, index) => (
-                              <div className="item" key={index}>
-                                <img src={image.src} alt={image.alt} />
-                                <br/>
-                                <br/>
-                                <span>{image.alt}</span>
-                              </div>
-                            ))}
+                          {frameworks.map((image, index) => (
+                                <TrackVisibility>
+                                    {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                                        <div className="item" key={index}>
+                                        <img src={image.src} alt={image.alt} />
+                                        <br/>
+                                        <br/>
+                                        <span>{image.alt}</span>
+                                      </div>
+                                    </div>}
+                                </TrackVisibility>
+                              ))}
                         </Carousel>
                         <br/>
                         <br/>
                         <span className="tagline mb-4">Languages</span>
                         <Carousel responsive={responsiveLanguages} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
-                            {languages.map((image, index) => (
-                              <div className="item" key={index}>
-                                <img src={image.src} alt={image.alt} />
-                                <br/>
-                                <br/>
-                                <span>{image.alt}</span>
-                              </div>
-                            ))}
+                          {languages.map((image, index) => (
+                                <TrackVisibility>
+                                    {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                                      <div className="item" key={index}>
+                                        <img src={image.src} alt={image.alt} />
+                                        <br/>
+                                        <br/>
+                                        <span>{image.alt}</span>
+                                      </div>
+                                    </div>}
+                                </TrackVisibility>
+                              ))}
                         </Carousel>
                         <br/>
                         <br/>
                         <span className="tagline mb-4">Tools & Services</span>
                         <Carousel responsive={responsiveTools} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
-                            {tools.map((image, index) => (
-                              <div className="item" key={index}>
-                                <img src={image.src} alt={image.alt} />
-                                <br/>
-                                <br/>
-                                <span>{image.alt}</span>
-                              </div>
-                            ))}
+                          {tools.map((image, index) => (
+                                <TrackVisibility>
+                                    {({ isVisible }) =>
+                                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                                      <div className="item" key={index}>
+                                        <img src={image.src} alt={image.alt} />
+                                        <br/>
+                                        <br/>
+                                        <span>{image.alt}</span>
+                                      </div>
+                                    </div>}
+                                </TrackVisibility>
+                              ))}
                         </Carousel>
                     </div>
                 </div>
