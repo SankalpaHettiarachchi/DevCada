@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import Profile from "../assets/img/profile.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -51,6 +52,7 @@ export const Banner = () => {
       <Container className="text-center">
         <Row className="aligh-items-center">
             <Col>
+            <img className="profile-image" src={Profile} alt="Profile Image" />
               <TrackVisibility>
                   {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__pulse" : ""}>
