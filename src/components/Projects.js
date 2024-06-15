@@ -1,96 +1,189 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-// import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import AMC from "../assets/img/AMC.png";
+import ROST from "../assets/img/ROST.png";
+import CT from "../assets/img/CT.png";
+import CushyK from "../assets/img/CushyK.png";
+import Elite from "../assets/img/Elite.png";
+import Smart from "../assets/img/Smart.png";
 
 export const Projects = () => {
 
-  const projects = [
+  const all_projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "AMC Clinical Guide",
+      description: "Web Appication",
+      imgUrl: AMC,
+      giturl: 'https://github.com/SankalpaHettiarachchi/AMC-ClinicalGuide.git',
+      link: 'https://amcclinicalguide.com.au/',
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "ROST",
+      description: "Web Application (University Academic Project)",
+      imgUrl: ROST,
+      giturl: 'https://github.com/SankalpaHettiarachchi/AMC-ClinicalGuide.git',
+      link: 'https://github.com/SankalpaHettiarachchi/AMC-ClinicalGuide.git',
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "CT Tours & Travels",
+      description: "Bussiness Profle Website",
+      imgUrl: CT,
+      giturl: 'https://github.com/SankalpaHettiarachchi/CT-Tours.git',
+      link: 'https://cttravelsandtours.com/',
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Cushy K Photography",
+      description: "Bussiness Profle Website",
+      imgUrl: CushyK,
+      giturl: 'https://github.com/SankalpaHettiarachchi/CushyK.git',
+      link: 'https://cushyk.com.au/',
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Elite Global",
+      description: "Bussiness Profle Website",
+      imgUrl: Elite,
+      giturl: 'https://github.com/SankalpaHettiarachchi/EliteGlobal.git',
+      link: 'https://eliteglobedu.com/',
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Smart Door Lock",
+      description: "IOT Application (University Academic Project)",
+      imgUrl: Smart,
+      giturl: 'https://github.com/SankalpaHettiarachchi/Smart_door_lock.git',
+      link: 'https://github.com/SankalpaHettiarachchi/Smart_door_lock.git',
+    },
+  ];
+
+  const webapps = [
+    {
+      title: "AMC Clinical Guide",
+      description: "Web Appication",
+      imgUrl: AMC,
+      giturl: 'https://github.com/SankalpaHettiarachchi/AMC-ClinicalGuide.git',
+      link: 'https://amcclinicalguide.com.au/',
+    },
+    {
+      title: "ROST",
+      description: "Web Application (University Academic Project)",
+      imgUrl: ROST,
+      giturl: 'https://github.com/SankalpaHettiarachchi/AMC-ClinicalGuide.git',
+      link: 'https://github.com/SankalpaHettiarachchi/AMC-ClinicalGuide.git',
+    },
+  ];
+
+  const websites = [
+    {
+      title: "CT Tours & Travels",
+      description: "Bussiness Profle Website",
+      imgUrl: CT,
+      giturl: 'https://github.com/SankalpaHettiarachchi/CT-Tours.git',
+      link: 'https://cttravelsandtours.com/',
+    },
+    {
+      title: "Cushy K Photography",
+      description: "Bussiness Profle Website",
+      imgUrl: CushyK,
+      giturl: 'https://github.com/SankalpaHettiarachchi/CushyK.git',
+      link: 'https://cushyk.com.au/',
+    },
+    {
+      title: "Elite Global",
+      description: "Bussiness Profle Website",
+      imgUrl: Elite,
+      giturl: 'https://github.com/SankalpaHettiarachchi/EliteGlobal.git',
+      link: 'https://eliteglobedu.com/',
+    },
+  ];
+
+  const other = [
+    {
+      title: "Smart Door Lock",
+      description: "IOT Application (University Academic Project)",
+      imgUrl: Smart,
     },
   ];
 
   return (
     <section className="project" id="projects">
-      <Container>
+      <Container className="">
         <Row>
           <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2 className="mb-5">Projects</h2>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">All</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Web Sites</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Web Apps</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="fourth">Other</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
-            </TrackVisibility>
+          <h2 className="mb-5">Projects</h2>
+            <Tab.Container id="projects-tabs" defaultActiveKey="all">
+              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                <Nav.Item>
+                  <Nav.Link eventKey="all">All</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="webapps">Web Apps</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="websites">Web Sites</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="other">Other</Nav.Link>
+                </Nav.Item>
+              </Nav>
+              <Tab.Content id="slideInUp">
+                <Tab.Pane eventKey="all">
+                  <Row>
+                    {
+                      all_projects.map((project, index) => {
+                        return (
+                          <ProjectCard
+                            key={index}
+                            {...project}
+                            />
+                        )
+                      })
+                    }
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="websites">
+                  <Row>
+                    {
+                      websites.map((project, index) => {
+                        return (
+                          <ProjectCard
+                            key={index}
+                            {...project}
+                            />
+                        )
+                      })
+                    }
+                  </Row>                    
+                </Tab.Pane>
+                <Tab.Pane eventKey="webapps">
+                  <Row>
+                    {
+                      webapps.map((project, index) => {
+                        return (
+                          <ProjectCard
+                            key={index}
+                            {...project}
+                            />
+                        )
+                      })
+                    }
+                  </Row>                    
+                </Tab.Pane>
+                <Tab.Pane eventKey="other">
+                  <Row>
+                    {
+                      other.map((project, index) => {
+                        return (
+                          <ProjectCard
+                            key={index}
+                            {...project}
+                            />
+                        )
+                      })
+                    }
+                  </Row>                    
+                </Tab.Pane>
+              </Tab.Content>
+            </Tab.Container>
           </Col>
         </Row>
       </Container>

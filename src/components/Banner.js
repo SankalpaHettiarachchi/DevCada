@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-// import 'animate.css';
+import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
@@ -53,7 +53,7 @@ export const Banner = () => {
             <Col>
                 <TrackVisibility>
                     {({ isVisible }) =>
-                    <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
                         <span className="tagline">Welcome to my Portfolio</span>
                         <h1><span className="yellow">{`Hi! I'm`}</span> {`Sankalpa Hettiarachchi`}</h1>
                         <h2>{`{ `}<span className="txt-rotate brackets" dataPeriod="1000" data-rotate='[ "Laravel Developer", "Full-Stack Developer", "Back-End Developer" ]'><span className="wrap">{text}</span></span>{` }`}</h2>
