@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { ArrowRightCircle, TypeUnderline } from 'react-bootstrap-icons';
 import Profile from "../assets/img/profile.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -61,7 +61,7 @@ export const Banner = () => {
                       <h2>{`{ `}<span className="txt-rotate brackets" dataPeriod="1000" data-rotate='[ "Laravel Developer", "Full-Stack Developer", "Back-End Developer" ]'><span className="wrap">{text}</span></span>{` }`}</h2>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                       <div className="see-project-btn">
-                          <button onClick={() => console.log('connect')}>See My Works <ArrowRightCircle size={25} /></button>
+                      <a className="no-underline" href="https://docs.google.com/document/d/1_CMB6kR2BBvdpkN59NM4qV6wsLg3ltT2/edit?usp=drive_link&ouid=104559434813021285975&rtpof=true&sd=true"><button>My Resume<ArrowRightCircle size={25} /></button></a>
                       </div>
                   </div>}
               </TrackVisibility>

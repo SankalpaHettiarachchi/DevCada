@@ -41,11 +41,11 @@ export const NavBar = () => {
                 </Nav>
                 <span className="navbar-text">
                     <div className="social-icon">
-                        <a href="#"><img src={gitIcon} alt="" /></a>
-                        <a href="#"><img src={linkedinIcon} alt="" /></a>
-                        <a href="#"><img src={fbIcon} alt="" /></a>
+                        <a href="https://github.com/SankalpaHettiarachchi"><img src={gitIcon} alt="" /></a>
+                        <a href="https://linkedin.com/in/sankalpa-hettiarachchi-130867231"><img src={linkedinIcon} alt="" /></a>
+                        <a href="https://www.facebook.com/sankalpa.isurukala?mibextid=ZbWKwL"><img src={fbIcon} alt="" /></a>
                     </div>
-                    <button className="vvd" onClick={()=>console.log('connect')}><span>Let's Connect</span></button>
+                    <a href='mailto:sankalpa.isurukala17@gmail.com'><button className="vvd" onClick={()=>console.log('connect')}><span>Let's Connect</span></button></a>
                 </span>
                 </Navbar.Collapse>
             </Container>
