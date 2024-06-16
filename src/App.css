@@ -276,6 +276,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
+  margin-top: 10px;
   display: block;
 }
 .banner p {
@@ -284,12 +285,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+  margin-top: 20px;
 }
 .banner button {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 0px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
@@ -385,7 +387,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
-
+@media (max-width: 768px) { 
+  .skill {
+    padding: 20px 10px;
+  }
+}
 
 /************ Projects Css ************/
 .project {
@@ -521,6 +527,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-link{
   width: 10%;
 }
+
+@media (max-width: 768px) { 
+  .project {
+    padding: 20px 10px;
+  }
+  .project .nav.nav-pills {
+    width: 100%;
+  }
+}
 /************ Contact Css ************/
 .contact {
   padding: 60px 0 200px 0;
@@ -599,15 +614,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .footer img {
-  width: 26%;
+  width: 20%;
 }
+
 .footer p {
   font-weight: 400;
   font-size: 14px;
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+@media (max-width: 768px) { 
+  .footer img {
+    width: 40%;
+  }
 }
 
 /* Clients Section */

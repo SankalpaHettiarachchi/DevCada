@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          <Col className="text-center">
+          <Col className="footer-logo text-center">
             <img src={devcada_logo} alt="Logo" />
           </Col>
         </Row>
@@ -20,7 +20,7 @@ export const Footer = () => {
               <a href="#"><img src={linkedinIcon} alt="Icon" /></a>
               <a href="#"><img src={fbIcon} alt="Icon" /></a>
             </div>
-            <p>DevCada Copyright 2024. All Rights Reserved</p>
+            <p>DevCada Copyright® 2024. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>

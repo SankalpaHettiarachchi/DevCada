@@ -132,7 +132,7 @@ export const Skills = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__pulse" : ""}>
-                              <Carousel responsive={responsiveFrameworks} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
+                              <Carousel responsive={responsiveFrameworks} className="owl-carousel owl-theme skill-slider">
                                 {frameworks.map((image, index) => (
                                       <div className="item" key={index}>
                                         <img src={image.src} alt={image.alt} />
@@ -150,7 +150,7 @@ export const Skills = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__pulse" : ""}>
-                              <Carousel responsive={responsiveLanguages} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
+                              <Carousel responsive={responsiveLanguages} className="owl-carousel owl-theme skill-slider">
                                 {languages.map((image, index) => (
                                       <div className="item" key={index}>
                                         <img src={image.src} alt={image.alt} />
@@ -168,7 +168,7 @@ export const Skills = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__pulse" : ""}>
-                              <Carousel responsive={responsiveTools} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
+                              <Carousel responsive={responsiveTools} className="owl-carousel owl-theme skill-slider">
                                 {tools.map((image, index) => (
                                       <div className="item" key={index}>
                                         <img src={image.src} alt={image.alt} />

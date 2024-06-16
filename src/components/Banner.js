@@ -57,7 +57,7 @@ export const Banner = () => {
                   {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__pulse" : ""}>
                       <span className="tagline">Welcome to my Portfolio</span>
-                      <h1 className="my-name"><span className="yellow">{`Hi! I'm`}</span> {`Sankalpa`} {`Hettiarchchi`}</h1>
+                      <h1 className="my-name"><span className="yellow">{`Hi! I'm`}</span> {`Sankalpa`} {`Hettiarachchi`}</h1>
                       <h2>{`{ `}<span className="txt-rotate brackets" dataPeriod="1000" data-rotate='[ "Laravel Developer", "Full-Stack Developer", "Back-End Developer" ]'><span className="wrap">{text}</span></span>{` }`}</h2>
                       <p>I am an undergraduate pursuing a Bachelor of Information and Communication Technology (Hons) at Rajarata University, Sri Lanka. With two years of experience in web application development and a solid foundation in software engineering, I am dedicated to delivering high-quality solutions that prioritize customer satisfaction.</p>
                       <div className="see-project-btn">

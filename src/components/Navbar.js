@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect,useRef } from "react"
 import { Navbar, Container,Nav } from "react-bootstrap"
 import gitIcon from '../assets/img/git.svg';
 import linkedinIcon from '../assets/img/linkedIn.svg';
@@ -8,6 +8,8 @@ import devcada_logo from '../assets/img/Devcada_Logo.png';
 export const NavBar = () => {
     const [actveLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const navBarRef = useRef(null);
+
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
@@ -21,7 +23,10 @@ export const NavBar = () => {
     },[])
 
     const onUpdateActiveLink = (value) =>{
-        setActiveLink(value)
+        setActiveLink(value);
+        if (navBarRef.current && navBarRef.current.classList.contains('show')) {
+            navBarRef.current.classList.remove('show');
+        }
     }
 
     return (
@@ -31,9 +36,9 @@ export const NavBar = () => {
                     <img className="DevCada_Logo" src={devcada_logo} alt="DevCada Logo"/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"> 
-                    <span className="navbar-toggler-icon"></span>
+                    <span  className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav" className="navbar-main">
+                <Navbar.Collapse id="basic-navbar-nav" className="navbar-main" ref={navBarRef}>
                     <Nav className="me-auto">
                         <Nav.Link href="#home" className={actveLink==='home' ? 'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>HOME</Nav.Link>
                         <Nav.Link href="#projects" className={actveLink==='projects' ? 'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>PROJECTS</Nav.Link>
