@@ -66,6 +66,13 @@ button {
 input:focus, textarea:focus, select:focus {
   outline: none;
 }
+p.success {
+	color: green;
+}
+
+p.danger {
+	color: red;
+}
 
 @media (min-width:1700px) {
 	main .container {
@@ -74,13 +81,6 @@ input:focus, textarea:focus, select:focus {
 	}
 }
 
-p.success {
-	color: green;
-}
-
-p.danger {
-	color: red;
-}
 /************ Navbar Css ************/
 .DevCada_Logo{
   width: 250px;
@@ -233,10 +233,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
-.navbar-collapse{
+.navbar-main{
   margin-left: 150px;
 }
-
+@media (max-width: 768px) {
+  .navbar-main {
+    margin: 0;
+    background: linear-gradient(90.21deg, #006769 -5.91%, #9DDE8B 111.58%)
+  }
+  .me-auto{
+    margin: 20px;
+  }
+  .profile-image{
+    width: 40% !important;
+    margin-top: -100px;
+    border-radius: 50%;
+    border: 2px solid #9DDE8B;
+  }
+}
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
@@ -298,7 +312,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #E6FF94;
 }
 .brackets{
-  color: #006769;
+  color: #40A578;
 }
 .profile-image{
   width: 10%;

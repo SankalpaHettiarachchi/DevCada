@@ -16,7 +16,7 @@ import {
 export const Clients = () =>{
 
     return (
-        <section className="skill" id="skills">
+        <section className="skill" id="testimonials">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

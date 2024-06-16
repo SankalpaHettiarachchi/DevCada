@@ -61,7 +61,7 @@ export const Banner = () => {
                       <h2>{`{ `}<span className="txt-rotate brackets" dataPeriod="1000" data-rotate='[ "Laravel Developer", "Full-Stack Developer", "Back-End Developer" ]'><span className="wrap">{text}</span></span>{` }`}</h2>
                       <p>I am an undergraduate pursuing a Bachelor of Information and Communication Technology (Hons) at Rajarata University, Sri Lanka. With two years of experience in web application development and a solid foundation in software engineering, I am dedicated to delivering high-quality solutions that prioritize customer satisfaction.</p>
                       <div className="see-project-btn">
-                      <a className="no-underline" href="https://docs.google.com/document/d/1_CMB6kR2BBvdpkN59NM4qV6wsLg3ltT2/edit?usp=drive_link&ouid=104559434813021285975&rtpof=true&sd=true"><button>My Resume<ArrowRightCircle size={25} /></button></a>
+                      <a className="no-underline" href="https://drive.google.com/file/d/1uywjfrxR0-v4aTK8LsjaJpUQlUOsttQV/view?usp=sharing"><button>My Resume<ArrowRightCircle size={25} /></button></a>
                       </div>
                   </div>}
               </TrackVisibility>
