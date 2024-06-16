@@ -57,9 +57,9 @@ export const Banner = () => {
                   {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__pulse" : ""}>
                       <span className="tagline">Welcome to my Portfolio</span>
-                      <h1><span className="yellow">{`Hi! I'm`}</span> {`Sankalpa Hettiarachchi`}</h1>
+                      <h1 className="my-name"><span className="yellow">{`Hi! I'm`}</span> {`Sankalpa`} {`Hettiarchchi`}</h1>
                       <h2>{`{ `}<span className="txt-rotate brackets" dataPeriod="1000" data-rotate='[ "Laravel Developer", "Full-Stack Developer", "Back-End Developer" ]'><span className="wrap">{text}</span></span>{` }`}</h2>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                      <p>I am an undergraduate pursuing a Bachelor of Information and Communication Technology (Hons) at Rajarata University, Sri Lanka. With two years of experience in web application development and a solid foundation in software engineering, I am dedicated to delivering high-quality solutions that prioritize customer satisfaction.</p>
                       <div className="see-project-btn">
                       <a className="no-underline" href="https://docs.google.com/document/d/1_CMB6kR2BBvdpkN59NM4qV6wsLg3ltT2/edit?usp=drive_link&ouid=104559434813021285975&rtpof=true&sd=true"><button>My Resume<ArrowRightCircle size={25} /></button></a>
                       </div>

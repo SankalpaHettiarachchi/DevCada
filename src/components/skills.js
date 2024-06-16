@@ -75,11 +75,11 @@ export const Skills = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 3
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 3
     }
   };
   const responsiveLanguages = {
@@ -94,11 +94,11 @@ export const Skills = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 3
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 3
     }
   };
   const responsiveTools = {
@@ -113,11 +113,11 @@ export const Skills = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 3
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 3
     }
   };
 
@@ -129,57 +129,57 @@ export const Skills = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2 className="mb-5">Skills</h2>
                         <span className="tagline mb-4">Frameworks & Libraries</span>
-                        <Carousel responsive={responsiveFrameworks} infinite={false} className="owl-carousel owl-theme skill-slider">
-                          {frameworks.map((image, index) => (
-                                <TrackVisibility>
-                                    {({ isVisible }) =>
-                                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
-                                        <div className="item" key={index}>
-                                        <img src={image.src} alt={image.alt} />
-                                        <br/>
-                                        <br/>
-                                        <span>{image.alt}</span>
-                                      </div>
-                                    </div>}
-                                </TrackVisibility>
-                              ))}
-                        </Carousel>
-                        <br/>
-                        <br/>
-                        <span className="tagline mb-4">Languages</span>
-                        <Carousel responsive={responsiveLanguages} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
-                          {languages.map((image, index) => (
-                                <TrackVisibility>
-                                    {({ isVisible }) =>
-                                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                              <Carousel responsive={responsiveFrameworks} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
+                                {frameworks.map((image, index) => (
                                       <div className="item" key={index}>
                                         <img src={image.src} alt={image.alt} />
                                         <br/>
                                         <br/>
                                         <span>{image.alt}</span>
                                       </div>
-                                    </div>}
-                                </TrackVisibility>
-                              ))}
-                        </Carousel>
+                                    ))}
+                              </Carousel>
+                            </div>}
+                        </TrackVisibility>
                         <br/>
                         <br/>
-                        <span className="tagline mb-4">Tools & Services</span>
-                        <Carousel responsive={responsiveTools} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
-                          {tools.map((image, index) => (
-                                <TrackVisibility>
-                                    {({ isVisible }) =>
-                                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                        <span className="tagline mb-5">Languages</span>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                              <Carousel responsive={responsiveLanguages} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
+                                {languages.map((image, index) => (
                                       <div className="item" key={index}>
                                         <img src={image.src} alt={image.alt} />
                                         <br/>
                                         <br/>
                                         <span>{image.alt}</span>
                                       </div>
-                                    </div>}
-                                </TrackVisibility>
-                              ))}
-                        </Carousel>
+                                    ))}
+                              </Carousel>
+                            </div>}
+                        </TrackVisibility>
+                        <br/>
+                        <br/>
+                        <span className="tagline mb-5">Tools & Services</span>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                              <Carousel responsive={responsiveTools} arrows={false} infinite={false} className="owl-carousel owl-theme skill-slider">
+                                {tools.map((image, index) => (
+                                      <div className="item" key={index}>
+                                        <img src={image.src} alt={image.alt} />
+                                        <br/>
+                                        <br/>
+                                        <span>{image.alt}</span>
+                                      </div>
+                                    ))}
+                              </Carousel>
+                            </div>}
+                        </TrackVisibility>
                     </div>
                 </div>
             </div>
